@@ -1,6 +1,8 @@
 name: first workflow
 on:
-  #push
+  push:
+    branches:
+      -  git101
 
 #Manual Run
   workflow_dispatch:
