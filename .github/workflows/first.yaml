@@ -1,0 +1,16 @@
+name: first workflow
+on:
+  push
+
+jobs:
+  first-job:
+    runs-one: ubuntu-latest
+    steps: 
+      - name: run a shell command
+        run: echo "hello world"
+
+      - name: run multiple commands
+        run: |
+          echo "running multiple commands"
+          date
+          whoami
