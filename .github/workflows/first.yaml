@@ -4,7 +4,7 @@ on:
 
 jobs:
   first-job:
-    runs-one: ubuntu-latest
+    runs-on: ubuntu-latest
     steps: 
       - name: run a shell command
         run: echo "hello world"
