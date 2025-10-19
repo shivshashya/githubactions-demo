@@ -1,6 +1,12 @@
 name: first workflow
 on:
-  push
+  #push
+
+#Manual Run
+  workflow_dispatch:
+
+#Schedule:
+  - cron: '*/5 * * * *'   
 
 jobs:
   first-job:
@@ -14,3 +20,15 @@ jobs:
           echo "running multiple commands"
           date
           whoami
+ 
+ 
+  second-job: 
+    runs-on: windows-latest
+    needs: second-job
+    steps:
+      - name: show current directory
+        run: pwd
+      - name: list files
+        run: dir
+      - name: Show current user
+        run: whoami 
