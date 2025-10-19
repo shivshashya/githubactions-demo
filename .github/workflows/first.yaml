@@ -24,7 +24,7 @@ jobs:
  
   second-job: 
     runs-on: windows-latest
-    needs: second-job
+    needs: first-job
     steps:
       - name: show current directory
         run: pwd
